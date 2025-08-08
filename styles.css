@@ -1,0 +1,848 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  --primary-green: rgb(102, 148, 74, 61%);
+  --primary-yellow: rgb(216, 172, 72);
+  --light-grey: rgb(233, 233, 233);
+  --olive-black: rgb(16, 23, 6);
+  --bg-yellow: rgb(216, 172, 72, 35%);
+  --menu-font-size: 1.75rem;
+  --title-font-size: 2.5rem;
+  --title-font-size-smaller: 2.2rem;
+  --medium-font-weight: 400;
+}
+
+body {
+  font-family: "Noto Sans Arabic", "Amiri", "Libre Bodoni", serif;
+  color: var(--olive-black);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Support for LTR content when needed */
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Arabic text improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Amiri", "Noto Sans Arabic", serif;
+  font-weight: 700;
+}
+
+p, span, div {
+  font-family: "Noto Sans Arabic", "Amiri", serif;
+}
+/* img, */
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+/* ----------------- */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-green);
+  height: 100vh;
+}
+
+.header__group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__btn__menu {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  height: 3.2rem;
+  margin: auto 1rem auto 0;
+}
+
+.header__logo {
+  padding: 0.9rem;
+  max-width: 320px;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__nav.active {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--menu-font-size);
+  font-weight: var(--medium-font-weight);
+}
+
+.nav__link {
+  font-size: 1.4rem;
+  margin-bottom: 1.2em;
+}
+
+.nav__btn {
+  padding: 0.3rem 2.6rem;
+  margin-bottom: 2.4rem;
+  background-color: var(--primary-yellow);
+}
+
+.header__img__container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.header__img {
+  height: 90vh;
+  left: 50%;
+  margin-left: -70vh;
+  position: absolute;
+}
+
+.section {
+  width: 100%;
+  background-color: var(--bg-yellow);
+}
+
+.section__container {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.section--bg-grey {
+  background-color: var(--light-grey);
+}
+
+.section--bg-green {
+  background-color: var(--primary-green);
+}
+
+.section__title {
+  font-size: var(--title-font-size);
+  font-weight: var(--medium-font-weight);
+  padding-bottom: 1.6rem;
+}
+
+.section__title--smaller {
+  font-size: var(--title-font-size-smaller);
+}
+
+.img__about-us {
+  margin-bottom: 2rem;
+}
+
+.section__contact__email {
+  font-size: 7vw;
+  font-style: italic;
+}
+
+.section_contact_img {
+  height: 45vw;
+  z-index: 0;
+  position: absolute;
+  left: 30vw;
+}
+
+.section__contact__container {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__contact__title {
+  font-size: 3vw;
+}
+
+.section__img {
+  flex-shrink: 0;
+  margin: 0 -1rem;
+}
+
+.section__img--no-padding {
+  padding: 0;
+}
+
+.section__location__img {
+  height: 70vh;
+}
+
+.footer__ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  column-gap: 32px;
+}
+
+.nav__link--footer {
+  font-size: 1.4rem;
+  padding: 1.6rem 0;
+}
+
+.nav__btn--footer {
+  width: 100%;
+  margin: 2rem 0;
+  font-size: 1.4rem;
+}
+
+.footer__section__picture {
+  height: 30vh;
+  place-self: center;
+}
+
+.footer__section__picture__img {
+  height: 100%;
+}
+
+.footer__address {
+  padding: 2rem 0 0 0;
+  text-align: center;
+}
+
+.subscribe__btn {
+  font-size: 1.4rem;
+}
+
+.section__subscribe__container {
+  gap: 2rem;
+}
+
+.section__img--dining {
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 600px) {
+  .section__subscribe__container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .subscribe__btn {
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: center;
+    min-width: 30%;
+  }
+
+  .section__img--dining {
+    padding-bottom: 0;
+  }
+  .header__group {
+    height: auto;
+  }
+
+  .section__container--footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+    overflow: hidden;
+  }
+
+  .footer__section__picture {
+    width: 20%;
+  }
+
+  .footer__section__picture__img {
+    width: 100%;
+  }
+
+  .footer__section--details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .footer__address {
+    padding: 0;
+  }
+
+  .nav__btn--footer {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section__container {
+    font-size: 1.6rem;
+    padding: 6rem 4rem;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section__img {
+    width: 45%;
+    margin: 0;
+  }
+  .section__location__img {
+    width: 60%;
+  }
+
+  .section_contact_img {
+    height: 70vh;
+  }
+
+  .section__subscribe__container {
+    flex-direction: column;
+  }
+
+  .section_container_facilities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section__img--dining {
+    width: 100%;
+  }
+
+  .header__img {
+    height: 100vh;
+    overflow: hidden;
+    scale: 130%;
+  }
+
+  .header__nav {
+    grid-area: navi;
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--menu-font-size);
+  }
+
+  .header__img__container {
+    grid-area: img;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "logo img"
+      "navi img";
+  }
+
+  .header__logo {
+    margin: 4rem auto;
+    justify-self: center;
+  }
+
+  .header__btn__menu {
+    display: none;
+  }
+
+  .section__container {
+    max-width: 1440px;
+  }
+
+  .section__container--footer {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer__section--details {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .nav__btn--footer {
+    max-width: 26vw;
+    margin: var(--title-font-size);
+    align-self: center;
+  }
+}
+
+/* Menu Section Styles */
+.menu__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.menu__item {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.menu__item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu__item:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.menu__item__image {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu__item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.menu__item:hover .menu__item__image img {
+  transform: scale(1.1);
+}
+
+.menu__item__content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.menu__item__name {
+  font-family: "Amiri", "Noto Sans Arabic", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--olive-black);
+  margin: 0 0 1rem 0;
+}
+
+.menu__item__pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price__original {
+  font-size: 1rem;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.price__discount {
+  font-size: 1.4rem;
+  color: var(--primary-green);
+  font-weight: 700;
+  font-family: "Amiri", serif;
+}
+
+.price__current {
+  font-size: 1.4rem;
+  color: var(--olive-black);
+  font-weight: 700;
+  font-family: "Amiri", serif;
+}
+
+.discount__badge {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Design for Menu */
+@media (max-width: 1200px) {
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .menu__item__image {
+    height: 220px;
+  }
+
+  .menu__item__content {
+    padding: 1.2rem;
+  }
+
+  .menu__item__name {
+    font-size: 1.4rem;
+  }
+
+  .price__discount,
+  .price__current {
+    font-size: 1.2rem;
+  }
+
+  .discount__badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .menu__item__image {
+    height: 250px;
+  }
+
+  .menu__item__content {
+    padding: 1.5rem;
+  }
+
+  .menu__item__name {
+    font-size: 1.5rem;
+  }
+
+  .price__discount,
+  .price__current {
+    font-size: 1.3rem;
+  }
+
+  .menu__header {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: "Noto Sans Arabic", "Amiri", serif;
+}
+
+.chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-green);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.chatbot-toggle:hover {
+  background: var(--olive-black);
+  transform: scale(1.05);
+}
+
+.chatbot-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid var(--light-grey);
+  direction: rtl;
+  text-align: right;
+}
+
+.chatbot-window.active {
+  display: flex;
+}
+
+.chatbot-header {
+  background: var(--primary-green);
+  color: white;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatbot-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chatbot-avatar {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.chatbot-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.chatbot-title h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chatbot-title p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.chatbot-close {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.chatbot-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fafafa;
+}
+
+.message {
+  display: flex;
+  max-width: 80%;
+}
+
+.bot-message {
+  align-self: flex-start;
+}
+
+.user-message {
+  align-self: flex-end;
+}
+
+.message-content {
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.bot-message .message-content {
+  background: white;
+  color: var(--olive-black);
+  border: 1px solid var(--light-grey);
+  border-bottom-left-radius: 6px;
+}
+
+.user-message .message-content {
+  background: var(--primary-green);
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.chatbot-quick-actions {
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: white;
+  border-top: 1px solid var(--light-grey);
+}
+
+.quick-action-btn {
+  background: var(--bg-yellow);
+  border: 1px solid var(--primary-yellow);
+  color: var(--olive-black);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-action-btn:hover {
+  background: var(--primary-yellow);
+  color: white;
+}
+
+.chatbot-input-container {
+  padding: 16px;
+  background: white;
+  border-top: 1px solid var(--light-grey);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.chatbot-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--light-grey);
+  border-radius: 24px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.chatbot-input:focus {
+  border-color: var(--primary-green);
+}
+
+.chatbot-send {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-green);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.chatbot-send:hover {
+  background: var(--olive-black);
+}
+
+.chatbot-send:disabled {
+  background: var(--light-grey);
+  cursor: not-allowed;
+}
+
+/* Responsive Design for Chatbot */
+@media (max-width: 768px) {
+  .chatbot-container {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .chatbot-toggle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .chatbot-window {
+    width: calc(100vw - 30px);
+    height: 70vh;
+    bottom: 70px;
+    right: -15px;
+  }
+}

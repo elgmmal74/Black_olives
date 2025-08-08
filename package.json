@@ -1,0 +1,58 @@
+{
+  "name": "black-olives-restaurant",
+  "version": "1.0.0",
+  "description": "موقع مطعم الزيتون الأسود - مطعم فلسطيني أصيل في القاهرة",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server .",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "gh-pages -d .",
+    "lint:html": "htmlhint *.html",
+    "lint:css": "stylelint *.css",
+    "lint:js": "eslint *.js",
+    "format": "prettier --write *.html *.css *.js *.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/black-olives-restaurant.git"
+  },
+  "keywords": [
+    "restaurant",
+    "palestinian",
+    "food",
+    "cairo",
+    "egypt",
+    "arabic",
+    "chatbot",
+    "responsive",
+    "website",
+    "مطعم",
+    "فلسطيني",
+    "القاهرة",
+    "طعام"
+  ],
+  "author": "Black Olives Restaurant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-username/black-olives-restaurant/issues"
+  },
+  "homepage": "https://your-username.github.io/black-olives-restaurant",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "gh-pages": "^6.0.0",
+    "htmlhint": "^1.1.4",
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.0",
+    "serve": "^14.0.0",
+    "stylelint": "^15.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
